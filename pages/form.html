@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: rgb(229, 230, 176);
+      }
+      h1 {
+        color: blue;
+        font-family: Geneva, Tahoma, sans-serif;
+      }
+      p {
+        color: red;
+      }
+      .banner {
+    background-image: url('/superman.jpeg');
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .banner > p {
+    color: white;
+    padding: 10px;
+  }
+  @media (max-width: 576px) {
+    .banner {
+      background-image: url('/superman.jpeg');
+      align-items: flex-start;
+      height: 400px;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <p class="h1 display-4">Mark's Super Dropbox</p>
+      <p class="lead">This is Where You Store Your Stuff!</p>
+  </div>
+    
+
+    <form action="/functions" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="name" name="name" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Favorite Food</label>
+        <input type="food" name="food" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label>
+          Upload your stuff:
+          <input type="file" name="profile" class="form-control" />
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Submit" name="food" />
+      </div>
+    </form>
+  </body>
+</html>
